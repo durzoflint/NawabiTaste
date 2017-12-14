@@ -8,3 +8,11 @@
     display: inline-block;
     margin-left: 2px;
     vertical-align: middle;
+}
+.mydiv
+{
+	border-bottom: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-right: 1px solid;
+}
