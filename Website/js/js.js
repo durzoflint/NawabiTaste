@@ -6,7 +6,7 @@ function revieworder()
     var cart = document.getElementById("cart");
     if (myCart.innerText == "")
     {
-    	alert("Select something to order...")
+    	$('.alert').fadeIn("slow").delay(3000).fadeOut("slow");
        	return false;
 	}
     cart.value = myCart.innerText;
