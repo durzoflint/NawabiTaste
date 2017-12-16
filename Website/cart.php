@@ -51,6 +51,8 @@
   				$cartData=$_POST['cart'];
             	echo $cartData;
   			}
+  			else
+  				header('Location: ./order.html');
     	?>";
     	showCart(cartData);
   	</script>
