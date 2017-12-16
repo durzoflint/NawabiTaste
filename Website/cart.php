@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/js.js"></script>
     <link rel="stylesheet" href="./cs/cs.css">
   </head>
   <body>
@@ -38,21 +39,21 @@
       <img style="height: 100%; width: 100%;" src="https://placehold.it/1000x200?text=IMAGE">
     </div>
     <br>
-    <div style="margin-left: 5vw; margin-right: 5vw; max-width: 600px;" class="container">
-      <h2>Review Order</h2>
-      <div style="height: 50vh">
-        <?php
-          if(isset($_POST['cart']))
-          {
-            $cartData=$_POST['cart'];
-            echo $cartData;
-          }
-          else
-          {
-            echo "Nothing";
-          }
-        ?>
+    <div class="container">
+      <h2>Review Order</h2><hr>
+      <div style="height: auto; min-height: 50vh">
+      	<p id="data"></p>
       </div>
+      <script type="text/javascript">
+  		var cartData = "<?php
+  			if(isset($_POST['cart']))
+  			{
+  				$cartData=$_POST['cart'];
+            	echo $cartData;
+  			}
+    	?>";
+    	showCart(cartData);
+  	</script>
     </div>
     <br>
     <footer class="container-fluid text-center bg-footer">

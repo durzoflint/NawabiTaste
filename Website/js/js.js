@@ -1,6 +1,25 @@
 var lunchCost = 150;
 var dinnerCost = 150;
-function revieworder()
+function showCart(cartData)
+{
+    var data = document.getElementById("data")
+    while(cartData.length > 0)
+    {
+        if (cartData.charAt(0) == 'L')
+        {
+            var order = cartData.substring(0, 16);
+            cartData = cartData.substring(16);
+            data.innerText = data.innerText + order + "\n";
+        }
+        else
+        {
+            var order = cartData.substring(0, 17);
+            cartData = cartData.substring(17);
+            data.innerText = data.innerText + order + "\n";
+        }
+    }
+}
+function reviewOrder()
 {
     var myCart = document.getElementById("myCart");
     var cart = document.getElementById("cart");
@@ -102,8 +121,8 @@ function selectAllDinner()
 }
 function selectAll()
 {
-    selectAllDinner();
     selectAllLunch();
+    selectAllDinner();
 }
 function clearAll()
 {
