@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Feedback</title>
+    <title>Review Order</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,24 +25,34 @@
             <li><a href="./index.html">Home</a></li>
             <li><a href="./order.html">Order Now</a></li>
             <li><a href="./howitworks.html">How We Work</a></li>
-            <li class="active"><a>Contact Us</a></li>
+            <li><a href="./contactus.html">Contact Us</a></li>
             <li><a href="./feedback.html">Feedback</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-                <li><a href="./cart.html"><img style="height: 20px;" src="./img/shoppingcartwhitesmall.png">Cart</a></li>
+                <li class="active"><a href="./cart.html"><img style="height: 20px;" src="./img/shoppingcartwhitesmall.png">Cart</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div style="height: 20vh; width: 100vw;">
-      <img style="height: 100%; width: 100%;" src="https://placehold.it/1200x200?text=IMAGE">
+    <div style="height: 20vh; width: 100%;">
+      <img style="height: 100%; width: 100%;" src="https://placehold.it/1000x200?text=IMAGE">
     </div>
     <br>
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Your Name, CompanyName,<br>Address<br>Phone:  +91 1234567890, 9876543210<br>Email: email@website.name</p>
-      <br>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d889.8562313562869!2d81.00644388044785!3d26.858237482604373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2c19a830c19%3A0x34879b49100f154!2sMVD+Plaza!5e0!3m2!1sen!2sin!4v1513325568591" width="100%" height="340" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div style="margin-left: 5vw; margin-right: 5vw; max-width: 600px;" class="container">
+      <h2>Review Order</h2>
+      <div style="height: 50vh">
+        <?php
+          if(isset($_POST['cart']))
+          {
+            $cartData=$_POST['cart'];
+            echo $cartData;
+          }
+          else
+          {
+            echo "Nothing";
+          }
+        ?>
+      </div>
     </div>
     <br>
     <footer class="container-fluid text-center bg-footer">

@@ -35,14 +35,13 @@
 								<li><a href="#">Separated link</a></li>
 							</ul>
 						</li-->
-						<li><a href="./howitworks.html">How It Works</a></li>
+						<li><a href="./howitworks.html">How We Work</a></li>
 						<li><a href="./contactus.html">Contact Us</a></li> 
 						<li><a href="./feedback.html">Feedback</a></li> 
 					</ul>
-					<!--ul class="nav navbar-nav navbar-right">
-	        			<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					</ul-->
+					<ul class="nav navbar-nav navbar-right">
+	        			<li><a href="./cart.html"><img style="height: 20px;" src="./img/shoppingcartwhitesmall.png">Cart</a></li>
+					</ul>
 				</div>
 			</div>
 		</nav>
@@ -198,7 +197,10 @@
 				<p id="lunchNum">Lunch X 0 = Rs. 0</p>
 				<p id="dinnerNum">Dinner X 0 = Rs. 0</p>
 				<p id="totalCost">Total = Rs. 0</p>
-				<a href="./test.html" class="btn btn-info" role="button">Proceed</a>
+				<form method="post" action="./cart.php" onsubmit="return(revieworder());" style="text-align: center;">
+					<input hidden="" type="text" id="cart" name="cart" value="">
+			        <input class="btn" type="submit" name="submit" value="Proceed">
+			    </form>
 			</div>
 		</div>
 		<script src="./js/date.js"></script>

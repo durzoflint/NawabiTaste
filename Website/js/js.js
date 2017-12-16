@@ -1,5 +1,17 @@
 var lunchCost = 150;
 var dinnerCost = 150;
+function revieworder()
+{
+    var myCart = document.getElementById("myCart");
+    var cart = document.getElementById("cart");
+    if (myCart.innerText == "")
+    {
+    	alert("Select something to order...")
+       	return false;
+	}
+    cart.value = myCart.innerText;
+    return true;
+}
 function increaseCost(cost)
 {
     var costP = document.getElementById("totalCost");
