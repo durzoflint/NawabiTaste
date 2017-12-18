@@ -1,23 +1,44 @@
 var lunchCost = 150;
 var dinnerCost = 150;
+function delete_row(row)
+{
+    row.closest('tr').remove();
+    var allRows = document.getElementsByTagName("tr");
+    for (var i = 0; i < allRows.length; i++)
+    {
+        document.getElementsByClassName("sno")[i].innerText = (i+1);
+    }
+}
+function calculateTotalPrice()
+{
+    var allRows = document.getElementsByTagName("tr");
+    for (var i = 0; i < allRows.length; i++)
+    {
+        var quantity = document.getElementsByClassName("quantity")[i].getElementsByTagName("input")[0].value;
+        var unitprice = document.getElementsByClassName("unitprice")[i].innerText;
+        var totalprice = parseInt(quantity) * parseInt(unitprice);
+        document.getElementsByClassName("totalprice")[i].innerText = totalprice;
+    }
+}
 function showCart(cartData)
 {
-    var data = document.getElementById("data")
+    var sno = 1;
     while(cartData.length > 0)
     {
+        var order = "";
         if (cartData.charAt(0) == 'L')
         {
-            var order = cartData.substring(0, 16);
+            order = "<tr><td class=\"sno\">"+(sno++)+"</td><td style=\"width: 20%;\" class=\"orderfor\">" + cartData.substring(0, 16) + "</td><td style=\"width: 20%;\" class=\"quantity\"><input style=\"width: 100%; text-align: center;\" type=\"number\" min=\"1\" name=\"\" value=\"1\" onchange=\"calculateTotalPrice()\"></td><td style=\"width: 20%;\" class=\"unitprice\">"+ lunchCost +"</td><td style=\"width: 20%;\" class=\"totalprice\"></td><td onclick =\"delete_row($(this))\"><span class=\"glyphicon glyphicon-remove\"></span></td></tr>";
             cartData = cartData.substring(16);
-            data.innerText = data.innerText + order + "\n";
         }
         else
         {
-            var order = cartData.substring(0, 17);
+            order = "<tr><td class=\"sno\">"+(sno++)+"</td><td style=\"width: 20%;\" class=\"orderfor\">" + cartData.substring(0, 17) + "</td><td style=\"width: 20%;\" class=\"quantity\"><input style=\"width: 100%; text-align: center;\" type=\"number\" min=\"1\" name=\"\" value=\"1\" onchange=\"calculateTotalPrice()\"></td><td style=\"width: 20%;\" class=\"unitprice\">"+ dinnerCost +"</td><td style=\"width: 20%;\" class=\"totalprice\"></td><td onclick =\"delete_row($(this))\"><span class=\"glyphicon glyphicon-remove\"></span></td></tr>";
             cartData = cartData.substring(17);
-            data.innerText = data.innerText + order + "\n";
         }
+        $("#mytable tbody").append(order);
     }
+    calculateTotalPrice();
 }
 function reviewOrder()
 {

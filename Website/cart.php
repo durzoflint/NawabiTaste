@@ -41,8 +41,20 @@
     <br>
     <div class="container">
       <h2>Review Order</h2><hr>
-      <div style="height: auto; min-height: 50vh">
-      	<p id="data"></p>
+      <div style="height: auto; min-height: 50vh" class="table-responsive">
+        <table style="text-align: center;" id="mytable" class="table table-bordered">
+          <thead>
+            <tr>
+              <th style="text-align: center;">S. No.</th>
+              <th style="text-align: center;">Order for</th>
+              <th style="text-align: center;">Quantity</th>
+              <th style="text-align: center;">Unit Price</th>
+              <th style="text-align: center;">Total Price</th>
+              <th style="text-align: center;">Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
       <script type="text/javascript">
   		var cartData = "<?php
