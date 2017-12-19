@@ -14,10 +14,31 @@
         $address=$_POST['address'];
     if(isset($_POST['pincode']))
         $pincode=$_POST['pincode'];
-    $user_info="INSERT INTO users(username, password, name, mobileno, email, address, pincode) VALUES ('$username','$password','$name','$mobileno','$emailid','$address','$pincode')";
-    $result=mysql_query($user_info);
-    if($result===false)
-        echo "error: " .mysql_error();
+    //Fetch all usernames and check if $username already exists
+    $query="SELECT * FROM users";
+    $result=mysql_query($query,$connect);
+    $flag = true;
+    while($row = mysql_fetch_array($result, MYSQL_ASSOC))
+    {
+        if($row['username'] === $username)
+        {
+            $flag = false;
+            break;
+        }
+    }
+    if($flag==false)
+    {
+        echo "Username Already Exists.<br><br>You will be redirected to Sign Up page again in 5 seconds. Please change you username.";
+        sleep(5);
+        echo "<script type='text/javascript'>window.history.go(-1);</script>";
+    }
     else
-        header('Location:./index.html');
+    {
+        $user_info="INSERT INTO users(username, password, name, mobileno, email, address, pincode) VALUES ('$username','$password','$name','$mobileno','$emailid','$address','$pincode')";
+        $result=mysql_query($user_info);
+        if($result===false)
+            echo "error: " .mysql_error();
+        else
+            header('Location:./index.html');
+    }
 ?>
