@@ -1,24 +1,51 @@
 var lunchCost = 150;
 var dinnerCost = 150;
+function checkoutOrder()
+{
+    var allRows = document.getElementsByTagName("tr");
+    var finalCart = document.getElementById("finalcart");
+    for (var i = 0; i < allRows.length-1; i++)
+    {
+        var quantity = document.getElementsByClassName("quantity")[i].getElementsByTagName("input")[0].value;
+        var date = document.getElementsByClassName("orderfor")[i].innerText;
+        var price = document.getElementsByClassName("totalprice")[i].innerText;
+        finalCart.value = finalCart.value + quantity + " x " + date + ". Price : " + price + "/-<br>";
+    }
+    return true;
+}
 function delete_row(row)
 {
     row.closest('tr').remove();
     var allRows = document.getElementsByTagName("tr");
-    for (var i = 0; i < allRows.length; i++)
+    if (allRows.length == 1)
+    {
+        window.location.replace("./order.html");
+    }
+    for (var i = 0; i < allRows.length-1; i++)
     {
         document.getElementsByClassName("sno")[i].innerText = (i+1);
     }
+    calculateTotalPrice();
 }
 function calculateTotalPrice()
 {
     var allRows = document.getElementsByTagName("tr");
-    for (var i = 0; i < allRows.length; i++)
+    var grandTotal = 0;
+    for (var i = 0; i < allRows.length-1; i++)
     {
         var quantity = document.getElementsByClassName("quantity")[i].getElementsByTagName("input")[0].value;
         var unitprice = document.getElementsByClassName("unitprice")[i].innerText;
-        var totalprice = parseInt(quantity) * parseInt(unitprice);
+        var quant = parseInt(quantity);
+        if (quant <= 0)
+        {
+            document.getElementsByClassName("quantity")[i].getElementsByTagName("input")[0].value = 1;
+            quant = 1;
+        }
+        var totalprice = quant * parseInt(unitprice);
+        grandTotal = grandTotal + totalprice;
         document.getElementsByClassName("totalprice")[i].innerText = totalprice;
     }
+    document.getElementById("grandtotal").innerText = "Grand Total : " + grandTotal;
 }
 function showCart(cartData)
 {

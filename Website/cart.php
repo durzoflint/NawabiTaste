@@ -30,7 +30,7 @@
             <li><a href="./feedback.html">Feedback</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="./cart.html"><img style="height: 20px;" src="./img/shoppingcartwhitesmall.png">Cart</a></li>
+                <li class="active"><a href="./cart.php"><img style="height: 20px;" src="./img/shoppingcartwhitesmall.png">Cart</a></li>
           </ul>
         </div>
       </div>
@@ -55,6 +55,13 @@
           </thead>
           <tbody></tbody>
         </table>
+        <div style="text-align: right;">
+        	<p style="font-weight: bold;" id="grandtotal"></p>
+        	<form method="post" action="./checkout.php" onsubmit="return(checkoutOrder());">
+				<input hidden type="text" id="finalcart" name="finalcart" value="">
+		        <input class="btn" type="submit" name="submit" value="Checkout">
+		    </form>
+        </div>
       </div>
       <script type="text/javascript">
   		var cartData = "<?php
