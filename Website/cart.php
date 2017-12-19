@@ -30,8 +30,12 @@
             <li><a href="./feedback.html">Feedback</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="./cart.php"><img style="height: 20px;" src="./img/shoppingcartwhitesmall.png">Cart</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
+          <!--ul class="nav navbar-nav navbar-right">
+                <li><a href="./cart.php"><img style="height: 20px;" src="./img/shoppingcartwhitesmall.png">Cart</a></li>
+          </ul-->
         </div>
       </div>
     </nav>
