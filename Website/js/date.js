@@ -13,7 +13,7 @@ for (var i = 0; i < 30; i++)
 	var dateDD = date + "";
 	if(date < 10)
 		dateDD = "0" + date;
-	// document.getElementsByClassName("Lunch")[i].value = "Lunch " + dateDD+"/"+monthMM+"/"+mydate.getFullYear();
-	// document.getElementsByClassName("Dinner")[i].value = "Dinner " + dateDD+"/"+monthMM+"/"+mydate.getFullYear();
+	document.getElementsByClassName("Lunch")[i].innerText = "Lunch " + dateDD+"/"+monthMM+"/"+mydate.getFullYear();
+	document.getElementsByClassName("Dinner")[i].innerText = "Dinner " + dateDD+"/"+monthMM+"/"+mydate.getFullYear();
 	tableData.innerHTML = dateDD+"/"+monthMM+"/"+mydate.getFullYear()+"<br>"+days[mydate.getDay()] + "<br>" + tableData.innerHTML;
 }

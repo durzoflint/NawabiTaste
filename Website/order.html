@@ -34,15 +34,17 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
     z-index: 1;
 }
-.dropdown-content p {
+.dropdown-content div {
     padding: 12px 16px;
     margin-bottom: 0;
     display: block;
 }
-.dropdown-content p:hover {background-color: #f1f1f1}
+.dropdown-content div:hover {
+	background-color: rgba(0,0,0,0.4);
+}
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -96,253 +98,202 @@
 		</div>
 		<br>
 		<div class="container col-sm-12">
+			<div style="margin-bottom: 2vh; text-align: center;">
+				<button style="margin-bottom: 5px;" type="button" class="btn" onclick="selectAllLunch()">Select All Lunch</button>
+				<button style="margin-bottom: 5px;" type="button" class="btn" onclick="selectAllDinner()">Select All Dinner</button>
+				<button style="margin-bottom: 5px;" type="button" class="btn" onclick="selectAll()">Select All</button>
+				<button style="margin-bottom: 5px;" type="button" class="btn" onclick="clearAll()">Clear All</button>
+			</div>
 			<div style="text-align: center;">
 	  				<div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</div><!-- 
 	        		 --><div style="padding-bottom: 5px; padding-top: 5px;" class="mydiv dropdown">
 	  					<div class="dropdown-content">
-	  						<p>Lunch</p>
-	  						<p>Dinner</p>
+	  						<div onclick="toggleCheckbox(this);">Lunch<p class="Lunch hidden"></p></div>
+							<div onclick="toggleCheckbox(this);">Dinner<p class="Dinner hidden"></p></div>
 	  					</div>
-	        			<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Lunch" onchange="toggleCheckbox(this)">Lunch</label><br> -->
-						<!-- <label class="checkbox-inline"><input type="checkbox" value="" class="Dinner" onchange="toggleCheckbox(this)">Dinner</label><br> -->
 	        		</di>
         	</div>
 		</div>
-		<!-- <div style="text-align: center;" class="container col-sm-4">
+		<br>
+		<div style="text-align: center;" class="container col-sm-4">
 			<h4><img src="./img/contactus.png">Order Now : +91 0123456789</h4>
 			<h4>Order Details</h4>
 			<div style="overflow-y: auto; height: 40vh;" id="myCart"></div>
+		</div>
+		<div style="text-align: center;" class="container col-sm-4">
 			<h4>Order Summary</h4>
 			<div style="overflow-y: auto;">
 				<p id="lunchNum">Lunch X 0 = Rs. 0</p>
@@ -353,8 +304,7 @@
 			        <input class="btn" type="submit" name="submit" value="Proceed">
 			    </form>
 			</div>
-		</div> -->
-		<br><br>
+		</div>
 		<script src="./js/date.js"></script>
 	</body>
 </html>

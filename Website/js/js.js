@@ -162,8 +162,8 @@ function selectAllLunch()
     var allLunch = document.getElementsByClassName("Lunch");
     for (var i = 0; i < allLunch.length; i++)
     {
-        allLunch[i].checked = true;
-        var item = allLunch[i].value;
+        //allLunch[i].checked = true;
+        var item = allLunch[i].innerText;
         var index = cart.innerText.indexOf(item);
         if (index == -1)
         {
@@ -178,8 +178,8 @@ function selectAllDinner()
     var allDinner = document.getElementsByClassName("Dinner");
     for (var i = 0; i < allDinner.length; i++)
     {
-        allDinner[i].checked = true;
-        var item = allDinner[i].value;
+        //allDinner[i].checked = true;
+        var item = allDinner[i].innerText;
         var index = cart.innerText.indexOf(item);
         if (index == -1)
         {
@@ -195,7 +195,7 @@ function selectAll()
 }
 function clearAll()
 {
-    var allLunch = document.getElementsByClassName("Lunch");
+    /*var allLunch = document.getElementsByClassName("Lunch");
     for (var i = 0; i < allLunch.length; i++)
     {
         allLunch[i].checked = false;
@@ -204,7 +204,7 @@ function clearAll()
     for (var i = 0; i < allDinner.length; i++)
     {
         allDinner[i].checked = false;
-    }
+    }*/
     var cart = document.getElementById("myCart");
     cart.innerText = "";
     document.getElementById("lunchNum").innerText = "Lunch X 0 = Rs. 0";
@@ -214,9 +214,9 @@ function clearAll()
 function toggleCheckbox(element)
 {
     var cart = document.getElementById("myCart");
-    var item = element.value;
+    var item = element.children[0].innerText;
     var index = cart.innerText.indexOf(item);
-    if(element.checked && index == -1)
+    if(index == -1)
     {
         cart.innerText = cart.innerText + item + "\n";
         if (item.includes("Lunch"))
