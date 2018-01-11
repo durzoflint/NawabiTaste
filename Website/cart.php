@@ -62,7 +62,7 @@
         <div style="text-align: right;">
         	<p style="font-weight: bold;" id="grandtotal"></p>
         	<form method="post" action="./checkout.php" onsubmit="return(checkoutOrder());">
-				<input hidden type="text" id="finalcart" name="finalcart" value="">
+				    <input hidden type="text" id="finalcart" name="finalcart" value="">
 		        <input class="btn" type="submit" name="submit" value="Checkout">
 		    </form>
         </div>

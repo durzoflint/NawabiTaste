@@ -1,5 +1,26 @@
 var lunchCost = 150;
 var dinnerCost = 150;
+function validatePlaceOrder()
+{
+    var email = document.OrderForm.emailid.value;
+    atpos = email.indexOf("@");
+    dotpos = email.lastIndexOf(".");
+    if (email == "" || atpos < 1 || ( dotpos - atpos < 2 ))
+    {
+        alert("Please enter correct email ID")
+        document.OrderForm.emailid.focus() ;
+        return false;
+    }
+    if( document.OrderForm.mobileno.value == "" ||
+        isNaN( document.OrderForm.mobileno.value)
+        ||document.OrderForm.mobileno.value.length != 10 ) 
+    {
+        alert( "Please provide a valid(10 digit) Mobile No." );
+        document.OrderForm.mobileno.focus() ;
+        return false;
+    }
+    return true;
+}
 function validateSignup()
 {
     var email = document.SignUpForm.emailid.value;
